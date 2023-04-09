@@ -80,7 +80,6 @@ def main():
     parser.add_argument("-o", "--output", type=str, help="Name of output audio file.", required=True)
     parser.add_argument("-s", "--s3-bucket", type=str, help="s3 bucket to write the audio file to.", required=True)
     parser.add_argument("-m", "--model", type=str, help="OpenAI model name.", required=False, default='gpt-3.5-turbo')
-#    parser.add_argument("-p", "--prompt", type=str, help="Prompt used to convert equations to text.", required=False, default=PROMPT)
     parser.add_argument("-v", "--voice-id", type=str, help="AWS Polly voice ID.", required=False, default="Joanna")
     parser.add_argument("-f", "--audio-format", type=str, help="Audio output format.", required=False, default='mp3')
     args = parser.parse_args()
