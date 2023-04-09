@@ -86,7 +86,7 @@ def main():
     args = parser.parse_args()
 
     openai.api_key = os.getenv("OPENAI_API_KEY")
-    print(PROMPT)
+
     raw_text = read_file(args.input)
     processed_text = replace_equations(raw_text, args.model)
     task_id = synthesize_speech(processed_text, args.s3_bucket, args.voice_id, args.audio_format)
