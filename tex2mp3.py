@@ -11,7 +11,7 @@ logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
 EQUATION_PATTERN = re.compile(r"(\$\$[^\$]*\$\$|\$[^\$]*\$)")
-#PROMPT = "Provide the plain text version of the following LaTeX expression that could be easily read aloud. Do not add an introductory statement, include only your final answer:"
+
 PROMPT = """Convert the following LaTeX expression to plain text for TTS.
 INPUT: $$\\mathrm{FFN}(x)=\\max(0, xW_1 + b_1) W_2 + b_2$$
 OUTPUT: F F N of x is equal to the maximum of 0 and the product of x and W sub 1 added to b sub 1, all multiplied by W sub 2 and added to b sub 2
